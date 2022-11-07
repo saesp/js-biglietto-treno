@@ -15,6 +15,7 @@ let price = numberKm * minPrice;
 
 console.log("price", price);
 
+// output
 if (age < 18) { // 20% sconto minorenni
     let reducedPrice = price * 80 / 100;
     document.getElementById("first-title").innerHTML = `Il prezzo del tuo biglietto è di ${price} euro, ma è scontato del 20% perchè hai meno di 18 anni. Quindi il prezzo del tuo biglietto è di ${reducedPrice} euro.`;
