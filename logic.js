@@ -15,16 +15,18 @@ let price = numberKm * minPrice;
 
 console.log("price", price);
 
+const firstTitle = document.getElementById("first-title");
+
 // output
 if (age < 18) { // 20% sconto minorenni
     let reducedPrice = price * 80 / 100;
-    document.getElementById("first-title").innerHTML = `Il prezzo del tuo biglietto è di ${price} euro, ma è scontato del 20% perchè hai meno di 18 anni. Quindi il prezzo del tuo biglietto è di ${reducedPrice} euro.`;
+    firstTitle.innerHTML = `Il prezzo del tuo biglietto è di ${price} euro, ma è scontato del 20% perchè hai meno di 18 anni. Quindi il prezzo del tuo biglietto è di ${reducedPrice} euro.`;
     console.log("reduced price", reducedPrice);
 } else if (age > 65) { // 40% sconto over 65
     let reducedPrice = price * 60 / 100;
-    document.getElementById("first-title").innerHTML = `Il prezzo del tuo biglietto è di ${price} euro, ma è scontato del 40% perchè hai più di 65 anni. Quindi il prezzo del tuo biglietto è di ${reducedPrice} euro.`;
+    firstTitle.innerHTML = `Il prezzo del tuo biglietto è di ${price} euro, ma è scontato del 40% perchè hai più di 65 anni. Quindi il prezzo del tuo biglietto è di ${reducedPrice} euro.`;
     console.log("reduced price", reducedPrice);
 } else {
     price;
-    document.getElementById("first-title").innerHTML = `Il prezzo del tuo biglietto è di ${price} euro.`;
+    firstTitle.innerHTML = `Il prezzo del tuo biglietto è di ${price} euro.`;
 }
